@@ -69,6 +69,10 @@ class ScpToolCli:
             return False, err
         return True, 'connect success'
 
+    def close(self):
+        self.client.close()
+        self.ssh.close()
+
     def upload_file(self, local_file, remote_path):
         """
         上传文件或文件夹

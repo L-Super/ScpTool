@@ -137,6 +137,7 @@ class ScpTool(QWidget):
                 self.ui.textBrowser.append('文件下载成功')
             else:
                 self.ui.textBrowser.append(f'文件下载失败，错误信息：{flag[1]}')
+        cli.close()
 
     def progress_callback(self, filename, percent_sent):
 
